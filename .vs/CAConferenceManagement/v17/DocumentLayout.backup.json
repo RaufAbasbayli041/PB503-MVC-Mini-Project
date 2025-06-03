@@ -1,0 +1,244 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\repository\\implementation\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\repository\\implementation\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\repository\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\repository\\interface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\db\\conferencedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\db\\conferencedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\invitation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\invitation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\caconferencemanagement\\caconferencemanagement\\entity\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Repository\\Implementation\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Repository\\Implementation\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Repository\\Implementation\\GenericRepository.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Repository\\Implementation\\GenericRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwDgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:32:11.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Repository\\Interface\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Repository\\Interface\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Repository\\Interface\\IGenericRepository.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Repository\\Interface\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:30:24.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConferenceDB.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\DB\\ConferenceDB.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\DB\\ConferenceDB.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\DB\\ConferenceDB.cs",
+              "RelativeToolTip": "CAConferenceManagement\\DB\\ConferenceDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:29:35.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FeedBack.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\FeedBack.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\FeedBack.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\FeedBack.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\FeedBack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:27:46.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Person.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\Person.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Person.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T11:47:50.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Notification.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\Notification.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Notification.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:26:01.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Participation.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Participation.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\Participation.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Participation.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\Participation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:23:09.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EventType.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\EventType.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\EventType.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\EventType.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\EventType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:20:55.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Organizer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Organizer.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\Organizer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Organizer.cs*",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\Organizer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:19:00.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Location.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\Location.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Location.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:16:51.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Event.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\Event.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Event.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T12:45:06.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Invitation.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Invitation.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\Invitation.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\Invitation.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\Invitation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T12:47:46.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\CAConferenceManagement\\CAConferenceManagement\\Entity\\BaseEntity.cs",
+              "RelativeToolTip": "CAConferenceManagement\\Entity\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T12:41:27.544Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
