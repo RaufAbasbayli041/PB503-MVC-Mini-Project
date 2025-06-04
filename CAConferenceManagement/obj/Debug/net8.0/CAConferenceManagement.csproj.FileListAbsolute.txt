@@ -452,3 +452,4 @@ C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\CAConferenceManagement\CAC
 C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\CAConferenceManagement\CAConferenceManagement\obj\Debug\net8.0\CAConferenceManagement.pdb
 C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\CAConferenceManagement\CAConferenceManagement\obj\Debug\net8.0\CAConferenceManagement.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\CAConferenceManagement\CAConferenceManagement\obj\Debug\net8.0\ref\CAConferenceManagement.dll
+C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\CAConferenceManagement\CAConferenceManagement\obj\Debug\net8.0\CAConferenceManagement.sourcelink.json
