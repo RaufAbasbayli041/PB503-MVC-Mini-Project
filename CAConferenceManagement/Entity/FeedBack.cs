@@ -12,7 +12,7 @@ namespace CAConferenceManagement.Entity
         public Event Event { get; set; }
 
 
-        public int PersonId { get; set; }
-        public Person Person { get; set; }
+        public string UserId { get; set; }
+        public User USer { get; set; }
     }
 }

@@ -1,8 +1,9 @@
 ﻿namespace CAConferenceManagement.Entity
 {
-    public class Organizer : Person
+    public class Organizer : BaseEntity
     {
-        public int EventId { get; set; }
-        public Event Event { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
     }
 }

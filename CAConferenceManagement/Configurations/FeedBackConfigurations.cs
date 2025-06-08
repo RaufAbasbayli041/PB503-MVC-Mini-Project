@@ -12,9 +12,9 @@ namespace CAConferenceManagement.Configurations
                 .WithMany(e => e.FeedBacks)
                 .HasForeignKey(f => f.EventId)
                 .OnDelete(DeleteBehavior.NoAction);
-            builder.HasOne(f => f.Person)
+            builder.HasOne(f => f.USer)
                 .WithMany(p => p.FeedBacks)
-               .HasForeignKey(f => f.PersonId)
+               .HasForeignKey(f => f.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
         }
