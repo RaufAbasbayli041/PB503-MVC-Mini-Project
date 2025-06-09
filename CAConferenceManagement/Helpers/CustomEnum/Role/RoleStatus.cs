@@ -2,11 +2,11 @@
 {
     public enum RoleStatus
     {
-        Teacher = 1,
-        Student = 2,
-        Quest = 3,
-        Admin = 4,
-        Organizer = 5,
+        Admin = 1,
+        Teacher = 2,
+        Student = 3,
+        Organizer = 4,
+        Quest = 5,
 
     }
 }

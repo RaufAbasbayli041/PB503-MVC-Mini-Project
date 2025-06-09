@@ -19,6 +19,8 @@ namespace CAConferenceManagement.Helpers
                 if (!await roleManager.RoleExistsAsync(role))
                 {
                     await roleManager.CreateAsync(new IdentityRole(role));
+
+
                 }
             }
 

@@ -6,19 +6,12 @@
 }
 
 <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
-@* 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="~/lib/mdb/css/mdb.min.css" rel="stylesheet" />
 
-<!-- Pills navs -->
-<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="tab-login" data-mdb-pill-init href="#pills-login" role="tab"
-           aria-controls="pills-login" aria-selected="true">Login</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="tab-register" data-mdb-pill-init href="#pills-register" role="tab"
-           aria-controls="pills-register" aria-selected="false">Register</a>
-    </li>
-</ul>
+
+
+
 <!-- Pills navs -->
 <section class="vh-100" style="background-color: #eee;">
     <div class="container h-100">
@@ -31,13 +24,30 @@
 
                                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register Now!</p>
 
-                                <form asp-action="Register" class="mx-1 mx-md-4">
+                                <form asp-action="Register" method="post" enctype="multipart/form-data" class="mx-1 mx-md-4">
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input asp-for="Name" type="text" id="form3Example1c" class="form-control" />
+                                            <label asp-for="Name" class="form-label" for="form3Example1c">Your Name</label>
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input asp-for="Surname" type="text" id="form3Example1c" class="form-control" />
+                                            <label asp-for="Surname" class="form-label" for="form3Example1c">Your Surname</label>
+                                            <span asp-validation-for="Surname" class="text-danger"></span>
+                                        </div>
+                                    </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div data-mdb-input-init class="form-outline flex-fill mb-0">
                                             <input asp-for="UserName" type="text" id="form3Example1c" class="form-control" />
-                                            <label class="form-label" for="form3Example1c">Your Name</label>
+                                            <label asp-for="UserName" class="form-label" for="form3Example1c">Your UserName</label>
+                                            <span asp-validation-for="UserName" class="text-danger"></span>
                                         </div>
                                     </div>
 
@@ -45,7 +55,8 @@
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div data-mdb-input-init class="form-outline flex-fill mb-0">
                                             <input asp-for="Email" type="email" id="form3Example3c" class="form-control" />
-                                            <label class="form-label" for="form3Example3c">Your Email</label>
+                                            <label asp-for="Email" class="form-label" for="form3Example3c">Your Email</label>
+                                            <span asp-validation-for="Email" class="text-danger"></span>
                                         </div>
                                     </div>
 
@@ -53,7 +64,8 @@
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div data-mdb-input-init class="form-outline flex-fill mb-0">
                                             <input asp-for="Password" type="password" id="form3Example4c" class="form-control" />
-                                            <label class="form-label" for="form3Example4c">Password</label>
+                                            <label asp-for="Password" class="form-label" for="form3Example4c">Password</label>
+                                            <span asp-validation-for="Password" class="text-danger"></span>
                                         </div>
                                     </div>
 
@@ -62,7 +74,8 @@
                                         <div data-mdb-input-init class="form-outline flex-fill mb-0">
                                            
                                             <input asp-for="ConfirmPassword" type="password" id="form3Example4cd" class="form-control" />
-                                            <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                                            <label asp-for="ConfirmPassword" class="form-label" for="form3Example4cd">Repeat your password</label>
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                         </div>
                                     </div>
 
@@ -84,7 +97,7 @@
                                     </div>
 
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-info" >Register</a>
+                                        <button class="btn btn-info" type="submit">Register</button>
                                       
                                     </div>
 
@@ -104,81 +117,9 @@
         </div>
     </div>
 </section>
-
-
-*@
-
+ 
 <script src="~/lib/bootstrap/js/bootstrap.js"></script> 
-
-
-<!-- Pills navs -->
-<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="tab-login" data-mdb-pill-init href="#pills-login" role="tab"
-           aria-controls="pills-login" aria-selected="true">Login</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="tab-register" data-mdb-pill-init href="#pills-register" role="tab"
-           aria-controls="pills-register" aria-selected="false">Register</a>
-    </li>
-</ul>
-<!-- Pills navs -->
-<!-- Pills content -->
-<div class="tab-content">
-   
-    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-        <form as asp-action="Register">
-        
-                    <!-- Username input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-                <input asp-for="UserName" type="text" id="registerUsername" class="form-control" />
-                <label class="form-label" for="registerUsername">Username</label>
-            </div>
-
-            <!-- Email input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-                <input asp-for="Email" type="email" id="registerEmail" class="form-control" />
-                <label class="form-label" for="registerEmail">Email</label>
-            </div>
-
-            <!-- Password input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-                <input asp-for="Password" type="password" id="registerPassword" class="form-control" />
-                <label class="form-label" for="registerPassword">Password</label>
-            </div>
-
-            <!-- Repeat Password input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-                <input asp-for="ConfirmPassword" type="password" id="registerRepeatPassword" class="form-control" />
-                <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-            </div>
-
-
-            <div data-mdb-input-init class="form-outline mb-4">
-                <input asp-for="ConfirmPassword" type="password" id="registerRepeatPassword" class="form-control" />
-                <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-            </div>
-
-            <div data-mdb-input-init class="form-outline flex-fill mb-4">
-
-                <label asp-for="Role" class="form-label">Choose Role</label>
-                <select asp-for="Role" asp-items="Html.GetEnumSelectList<RoleStatus>()" class="form-select"></select>
-                <span asp-validation-for="Role" class="text-danger"></span>
-            </div>
-
-
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-                       aria-describedby="registerCheckHelpText" />
-                <label class="form-check-label" for="registerCheck">
-                    I have read and agree to the terms
-                </label>
-            </div>
-
-            <!-- Submit button -->
-            <a type="submit" asp-action="Login" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-3">Sign in</a>
-        </form>
-    </div>
-</div>
-<!-- Pills content -->
+<script src="~/lib/jquery/jquery.js"></script>
+<script src="~/lib/jquery-validation/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<script src="~/lib/mdb/js/mdb.min.js"></script>

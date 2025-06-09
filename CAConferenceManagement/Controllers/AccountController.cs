@@ -1,4 +1,5 @@
-﻿using CAConferenceManagement.Entity;
+﻿using CAConferenceManagement.EmailOperations.Interface;
+using CAConferenceManagement.Entity;
 using CAConferenceManagement.Helpers.Enum.Role;
 using CAConferenceManagement.Models;
 using Microsoft.AspNetCore.Http;
@@ -9,16 +10,61 @@ using System.Collections.Immutable;
 
 namespace CAConferenceManagement.Controllers
 {
-
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly IEmailSenderOpt _emailSender;
 
-        public AccountController(SignInManager<User> signInManager, UserManager<User> userManager)
+        public AccountController(SignInManager<User> signInManager, UserManager<User> userManager, IEmailSenderOpt emailSender)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _emailSender = emailSender;
+        }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterDTO registerDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(registerDTO);
+            }
+
+            var user1 = new User
+            {
+                UserName = registerDTO.UserName,
+                Email = registerDTO.Email,
+                Name = registerDTO.Name,
+                Surname = registerDTO.Surname
+            };
+            var result = await _userManager.CreateAsync(user1, registerDTO.Password);
+            if (result.Succeeded)
+            {
+                await _signInManager.SignInAsync(user1, isPersistent: false);
+                await _userManager.AddToRoleAsync(user1, registerDTO.Role.ToString());
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user1);
+
+                var confirmationLink = Url.Action("ConfirmEmail", "Account", new { userId = user1.Id, token = token }, protocol: HttpContext.Request.Scheme);
+
+                await _emailSender.SendEmailAsync(user1.Email, "Confirm your email", $"Please confirm your account by clicking this link: <a href='{confirmationLink}'>link</a>");
+                TempData["SuccessMessage"] = "Registration successful. Please check your email to confirm your account.";
+
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                    ModelState.AddModelError("", "Registration failed. Please try again.");
+                }
+            }
+
+            return View(registerDTO);
         }
 
         [HttpGet]
@@ -41,11 +87,22 @@ namespace CAConferenceManagement.Controllers
             {
                 user = await _userManager.FindByNameAsync(loginDTO.UserNameOrEmail);
             }
-           
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Invalid username or email.");
+                return View(loginDTO);
+            }
+            if (!await _userManager.IsEmailConfirmedAsync(user))
+            {
+                ModelState.AddModelError("", "Email not confirmed. Please check your email for confirmation link.");
+                return View(loginDTO);
+            }
+
+
             var result = await _signInManager.PasswordSignInAsync(user, loginDTO.Password, isPersistent: false, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                switch (user.Role)
+                switch (loginDTO.Role)
                 {
                     case RoleStatus.Admin:
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
@@ -64,62 +121,33 @@ namespace CAConferenceManagement.Controllers
                 ModelState.AddModelError("", "Invalid username,email or password.");
                 return View(loginDTO);
             }
+
+
         }
-
-
-
-
-
-
         [HttpGet]
-        public IActionResult Register()
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> Register(RegisterDTO registerDTO)
-        {
-
-            if (!ModelState.IsValid)
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
             {
-                return View(registerDTO);
+                return BadRequest("Invalid email confirmation link.");
             }
-
-            var user1 = new User
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
             {
-                UserName = registerDTO.UserName,
-                Email = registerDTO.Email,
-                Role = registerDTO.Role,
-            };
-            var result = await _userManager.CreateAsync(user1, registerDTO.Password);
+                return NotFound("User not found.");
+            }
+            var result = await _userManager.ConfirmEmailAsync(user, token);
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user1, registerDTO.Role.ToString());
-                await _signInManager.SignInAsync(user1, isPersistent: false);
-                switch (registerDTO.Role)
-                {
-                    case RoleStatus.Admin:
-                        return RedirectToAction("Index", "Home", new { area = "Admin" });
-                    case RoleStatus.Teacher:
-                        return RedirectToAction("Index", "Home", new { area = "Teacher" });
-                    case RoleStatus.Organizer:
-                        return RedirectToAction("Index", "Home", new { area = "Organizer" });
-                    case RoleStatus.Student:
-                        return RedirectToAction("Index", "Home", new { area = "Student" });
-                    default:
-                        return RedirectToAction("Index", "Home");
-                }
+                TempData["SuccessMessage"] = "Email confirmed successfully. You can now log in.";
+                return RedirectToAction("Login");
             }
             else
             {
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
+                ModelState.AddModelError("", "Email confirmation failed. Please try again.");
+                return View();
             }
-            return View(registerDTO);
 
         }
-
     }
 }

@@ -1,66 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\emailoperations\\interface\\iemailsenderopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\emailoperations\\interface\\iemailsenderopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\emailoperations\\emailsenderopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\emailoperations\\emailsenderopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\areas\\admin\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\areas\\admin\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\elnur.a\\desktop\\rauf\\visual studio\\asp.net mvc\\pb503-mvc-mini-project\\caconferencemanagement\\helpers\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\helpers\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|c:\\users\\asus\\desktop\\code academy\\c#\\mvc\\miniproject\\pb503-mvc-mini-project\\caconferencemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA26D861-2BD8-4E7C-A108-476303B23E43}|CAConferenceManagement\\CAConferenceManagement.csproj|solutionrelative:caconferencemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -79,190 +51,103 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Header.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Header.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\Shared\\_Header.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Header.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Views\\Shared\\_Header.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAACHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T11:23:37.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T11:23:33.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T11:23:23.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T11:23:12.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T11:23:06.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-09T11:23:03.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\appsettings.json",
               "RelativeDocumentMoniker": "CAConferenceManagement\\appsettings.json",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\appsettings.json",
-              "RelativeToolTip": "CAConferenceManagement\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\appsettings.json*",
+              "RelativeToolTip": "CAConferenceManagement\\appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-09T09:03:54.8Z",
+              "WhenOpened": "2025-06-09T19:05:12.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EmailSenderOpt.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\EmailOperations\\EmailSenderOpt.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\EmailOperations\\EmailSenderOpt.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\EmailOperations\\EmailSenderOpt.cs*",
+              "RelativeToolTip": "CAConferenceManagement\\EmailOperations\\EmailSenderOpt.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T19:02:11.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IEmailSenderOpt.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\EmailOperations\\Interface\\IEmailSenderOpt.cs",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\EmailOperations\\Interface\\IEmailSenderOpt.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\EmailOperations\\Interface\\IEmailSenderOpt.cs*",
+              "RelativeToolTip": "CAConferenceManagement\\EmailOperations\\Interface\\IEmailSenderOpt.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T19:01:12.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CAConferenceManagement\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T17:23:15.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Register.cshtml",
               "RelativeToolTip": "CAConferenceManagement\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAAHQAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwCEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-08T15:47:26.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-08T15:42:51.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Login.cshtml*",
-              "RelativeToolTip": "CAConferenceManagement\\Views\\Account\\Login.cshtml*",
-              "ViewState": "AgIAACcAAAAAAAAAAAAkwEEAAAAiAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "CAConferenceManagement\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-08T15:00:32.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_Footer.cshtml",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Footer.cshtml",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Views\\Shared\\_Footer.cshtml",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Views\\Shared\\_Footer.cshtml",
-              "RelativeToolTip": "CAConferenceManagement\\Views\\Shared\\_Footer.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-08T15:42:56.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Entity\\User.cs",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Entity\\User.cs",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Entity\\User.cs",
-              "RelativeToolTip": "CAConferenceManagement\\Entity\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T14:52:17.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "CAConferenceManagement\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "CAConferenceManagement\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAAD8AAABEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Controllers\\AccountController.cs*",
+              "RelativeToolTip": "CAConferenceManagement\\Controllers\\AccountController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T14:44:00.987Z"
+              "WhenOpened": "2025-06-07T14:44:00.987Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DBHelper.cs",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Helpers\\DBHelper.cs",
-              "RelativeDocumentMoniker": "CAConferenceManagement\\Helpers\\DBHelper.cs",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Helpers\\DBHelper.cs",
-              "RelativeToolTip": "CAConferenceManagement\\Helpers\\DBHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T11:58:16.022Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Program.cs",
               "RelativeDocumentMoniker": "CAConferenceManagement\\Program.cs",
-              "ToolTip": "C:\\Users\\elnur.a\\Desktop\\Rauf\\Visual Studio\\ASP.NET MVC\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Code Academy\\C#\\MVC\\MiniProject\\PB503-MVC-Mini-Project\\CAConferenceManagement\\Program.cs",
               "RelativeToolTip": "CAConferenceManagement\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAYwBgAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwD0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T14:12:17.201Z",
               "EditorCaption": ""

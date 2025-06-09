@@ -1,4 +1,6 @@
 using CAConferenceManagement.DB;
+using CAConferenceManagement.EmailOperations;
+using CAConferenceManagement.EmailOperations.Interface;
 using CAConferenceManagement.Entity;
 using CAConferenceManagement.Extensions;
 using CAConferenceManagement.Helpers;
@@ -30,8 +32,7 @@ namespace CAConferenceManagement
                   options.Password.RequiredLength = 8;
                   options.Password.RequireDigit = true;
                   options.Password.RequireLowercase = false;
-                  options.User.RequireUniqueEmail = true;
-                  options.Password.RequireUppercase = false;
+                                  options.Password.RequireUppercase = false;
                   options.Password.RequireNonAlphanumeric = false;
               }).AddEntityFrameworkStores<ConferenceDB>()
                             .AddDefaultTokenProviders();
@@ -44,7 +45,10 @@ namespace CAConferenceManagement
             builder.Services.AddRepository();
             builder.Services.AddService();
 
+
+
             builder.Services.AddAutoMapper(typeof(Program).Assembly);
+            builder.Services.AddTransient<IEmailSenderOpt, EmailSenderOpt>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
