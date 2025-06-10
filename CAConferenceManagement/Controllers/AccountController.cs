@@ -102,19 +102,31 @@ namespace CAConferenceManagement.Controllers
             var result = await _signInManager.PasswordSignInAsync(user, loginDTO.Password, isPersistent: false, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                switch (loginDTO.Role)
+                var roles = await _userManager.GetRolesAsync(user);
+
+
+                if (roles.Contains(RoleStatus.Admin.ToString()))
                 {
-                    case RoleStatus.Admin:
-                        return RedirectToAction("Index", "Home", new { area = "Admin" });
-                    case RoleStatus.Teacher:
-                        return RedirectToAction("Index", "Home", new { area = "Teacher" });
-                    case RoleStatus.Organizer:
-                        return RedirectToAction("Index", "Home", new { area = "Organizer" });
-                    case RoleStatus.Student:
-                        return RedirectToAction("Index", "Home", new { area = "Student" });
-                    default:
-                        return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home", new { area = "Admin" });
                 }
+                else if (roles.Contains(RoleStatus.Teacher.ToString()))
+                {
+                    return RedirectToAction("Index", "Home", new { area = "Teacher" });
+                }
+                else if (roles.Contains(RoleStatus.Student.ToString()))
+                {
+                    return RedirectToAction("Index", "Home", new { area = "Student" });
+                }
+                else if (roles.Contains(RoleStatus.Organizer.ToString()))
+                {
+                    return RedirectToAction("Index", "Home", new { area = "Organizer" });
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Роль пользователя не распознана.");
+                    return View(loginDTO);
+                }
+
             }
             else
             {

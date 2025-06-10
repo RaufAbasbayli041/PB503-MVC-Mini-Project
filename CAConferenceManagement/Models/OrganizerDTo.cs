@@ -1,6 +1,6 @@
 ﻿namespace CAConferenceManagement.Models
 {
-    public class OrganizerDTo
+    public class OrganizerDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }

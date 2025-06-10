@@ -12,7 +12,7 @@ namespace CAConferenceManagement.CustomProfile
     {
         public CustomProfile()
         {
-            CreateMap<Organizer, OrganizerDTo>().ReverseMap();
+            CreateMap<Organizer, OrganizerDTO>().ReverseMap();
             CreateMap<Event, EventDTO>().ReverseMap();
             CreateMap<Invitation, InvitationDTO>().ReverseMap();
             CreateMap<EventType, EventTypeDTO>().ReverseMap();

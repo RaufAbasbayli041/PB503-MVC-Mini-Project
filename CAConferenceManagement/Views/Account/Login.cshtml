@@ -18,7 +18,7 @@
 <!-- Pills content -->
 <div class="tab-content container-fluid" style="width:fit-content">
     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-        <form>
+        <form asp-action="Login"> 
             <div class="text-center mb-3">
                 <p>Sign in with:</p>
                 <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
@@ -42,7 +42,7 @@
 
             <!-- Email input -->
             <div data-mdb-input-init class="form-outline mb-4">
-                <input asp-for="UserNameOrEmail" type="email" id="loginName" class="form-control" />
+                <input asp-for="UserNameOrEmail" type="" id="loginName" class="form-control" />
                 <label asp-for="UserNameOrEmail" class="form-label" for="loginName">Email or username</label>
                 <span asp-validation-for="UserNameOrEmail" class="text-danger"></span>
             </div>
