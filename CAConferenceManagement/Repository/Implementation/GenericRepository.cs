@@ -7,7 +7,7 @@ namespace CAConferenceManagement.Repository.Implementation
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity, new()
     {
-        private readonly ConferenceDB _conferenceDB;
+        protected readonly ConferenceDB _conferenceDB;
 
         private readonly DbSet<T> _dbSet;
         public GenericRepository(ConferenceDB conferenceDB)

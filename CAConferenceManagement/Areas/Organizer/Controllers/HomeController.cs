@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CAConferenceManagement.Service.Interface;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CAConferenceManagement.Areas.Organizer.Controllers
@@ -6,79 +7,21 @@ namespace CAConferenceManagement.Areas.Organizer.Controllers
     [Area("Organizer")]
     public class HomeController : Controller
     {
-        // GET: HomeController
+        private readonly IOrganizerService _organizerService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+       
+
+        public HomeController(IWebHostEnvironment webHostEnvironment, IOrganizerService organizerService)
+        {
+            _webHostEnvironment = webHostEnvironment;
+            _organizerService = organizerService;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var organizer = _organizerService.GetAllAsync();
+            return View(organizer);
         }
 
-        // GET: HomeController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: HomeController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: HomeController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HomeController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: HomeController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HomeController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: HomeController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

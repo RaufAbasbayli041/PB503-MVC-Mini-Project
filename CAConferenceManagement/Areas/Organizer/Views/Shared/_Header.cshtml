@@ -1,0 +1,41 @@
+﻿<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="#" class="logo">
+                        <h1>PB503</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <div class="search-input">
+                        <form id="search" action="#">
+                            <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                            <i class="fa fa-search"></i>
+                        </form>
+                    </div>
+
+                    <h1>Welcome,Organizer!</h1>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+
+                        <li class="scroll-to-section"><a href="#events">Events</a></li>
+                      
+
+                        <li class="scroll-to-section">
+                            <a asp-controller="Account" asp-action="Logout">Logout</a>
+                        </li>
+
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

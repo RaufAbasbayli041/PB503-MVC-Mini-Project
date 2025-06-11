@@ -42,7 +42,7 @@ namespace CAConferenceManagement.DB
                     Id = 2,
                     Name = "organizer2",
                     Surname = "organizer2",
-                    Email = "organizer2@gmail.com"
+                    Email = "organizer2@gmail.com",
                 }
             );
 

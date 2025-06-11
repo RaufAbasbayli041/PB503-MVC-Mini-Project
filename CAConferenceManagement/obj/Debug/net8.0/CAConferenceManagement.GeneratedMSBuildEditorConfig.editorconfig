@@ -26,6 +26,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\elnur.a\Desktop\Rauf\Visual Studio\ASP.NET MVC\PB503-MVC-Mini-Project\CAConferenceManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Areas/Organizer/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnYW5pemVyXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Areas/Organizer/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnYW5pemVyXFZpZXdzXFNoYXJlZFxfRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Areas/Organizer/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnYW5pemVyXFZpZXdzXFNoYXJlZFxfSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Areas/Organizer/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnYW5pemVyXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Areas/Organizer/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnYW5pemVyXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Areas/Organizer/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnYW5pemVyXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Views/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -69,6 +93,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Areas/Organizer/Views/Shared/_OrganizerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JnYW5pemVyXFZpZXdzXFNoYXJlZFxfT3JnYW5pemVyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-egebxhlhdm
 
 [C:/Users/elnur.a/Desktop/Rauf/Visual Studio/ASP.NET MVC/PB503-MVC-Mini-Project/CAConferenceManagement/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

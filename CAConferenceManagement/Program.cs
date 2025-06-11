@@ -66,7 +66,11 @@ namespace CAConferenceManagement
 
             app.UseAuthorization();
             app.UseAuthentication();
-          
+
+
+            app.MapControllerRoute(
+                 name: "areas",
+                  pattern: "{area:exists}/{controller=Home}/{action=index}/{id?}");
 
             app.MapControllerRoute(
                 name: "default",

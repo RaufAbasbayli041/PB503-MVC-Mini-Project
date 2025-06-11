@@ -26,7 +26,6 @@
     <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Organizer\Data\" />
     <Folder Include="Areas\Organizer\Models\" />
-    <Folder Include="Areas\Organizer\Views\" />
   </ItemGroup>
 
 </Project>
