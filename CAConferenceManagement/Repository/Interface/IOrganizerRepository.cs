@@ -1,6 +1,8 @@
-﻿namespace CAConferenceManagement.Repository.Interface
+﻿using CAConferenceManagement.Entity;
+
+namespace CAConferenceManagement.Repository.Interface
 {
-    internal interface IOrganizerRepository
+    public interface IOrganizerRepository : IGenericRepository<Organizer>
     {
     }
 }

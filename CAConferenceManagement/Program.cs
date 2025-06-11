@@ -32,20 +32,35 @@ namespace CAConferenceManagement
                   options.Password.RequiredLength = 8;
                   options.Password.RequireDigit = true;
                   options.Password.RequireLowercase = false;
-                                  options.Password.RequireUppercase = false;
+                  options.Password.RequireUppercase = false;
                   options.Password.RequireNonAlphanumeric = false;
               }).AddEntityFrameworkStores<ConferenceDB>()
                             .AddDefaultTokenProviders();
 
+            builder.Services.AddSession(opt =>
+            {
+                opt.IdleTimeout = TimeSpan.FromMinutes(30);
+                opt.Cookie.HttpOnly = true;
+                opt.Cookie.IsEssential = true;
+                opt.Cookie.Path = "/";
+            });
 
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";
+                options.LogoutPath = "/Account/Logout";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                options.SlidingExpiration = true;
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Name = "CAConferenceManagementCookie"; // Set a custom cookie name
+                options.Cookie.IsEssential = true; // Make the cookie essential
+                options.Cookie.Path = "/"; // Set the cookie path to root
 
-
-
+            });
 
             builder.Services.AddRepository();
             builder.Services.AddService();
-
-
 
             builder.Services.AddAutoMapper(typeof(Program).Assembly);
             builder.Services.AddTransient<IEmailSenderOpt, EmailSenderOpt>();
@@ -66,6 +81,7 @@ namespace CAConferenceManagement
 
             app.UseAuthorization();
             app.UseAuthentication();
+            app.UseSession();
 
 
             app.MapControllerRoute(
@@ -97,6 +113,7 @@ namespace CAConferenceManagement
 
             }
 
+            app.UseStaticFiles();
 
 
             app.Run();

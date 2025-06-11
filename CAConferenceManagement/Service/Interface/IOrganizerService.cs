@@ -5,5 +5,6 @@ namespace CAConferenceManagement.Service.Interface
 {
     public interface IOrganizerService :IGenericService<OrganizerDTO, Organizer> 
     {
+
     }
 }

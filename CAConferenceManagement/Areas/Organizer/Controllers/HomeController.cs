@@ -1,6 +1,7 @@
 ﻿using CAConferenceManagement.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace CAConferenceManagement.Areas.Organizer.Controllers
 {
@@ -17,9 +18,9 @@ namespace CAConferenceManagement.Areas.Organizer.Controllers
             _organizerService = organizerService;
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            var organizer = _organizerService.GetAllAsync();
+            var organizer = await _organizerService.GetAllAsync();
             return View(organizer);
         }
 

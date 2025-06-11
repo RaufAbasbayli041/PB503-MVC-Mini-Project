@@ -2,7 +2,8 @@
 
 namespace CAConferenceManagement.Repository.Interface
 {
-    public interface OrganizerRepository : IGenericRepository<Organizer>
+    public interface IEventTypeRepository : IGenericRepository<EventType>
     {
     }
+
 }
