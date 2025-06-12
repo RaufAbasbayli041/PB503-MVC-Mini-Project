@@ -120,6 +120,8 @@ namespace CAConferenceManagement.Controllers
                 else if (roles.Contains(RoleStatus.Organizer.ToString()))
                 {
                     return RedirectToAction("Index", "Home", new { area = "Organizer" });
+                    // raufka@code.edu.az   mail 
+                    // Or123456!    parol
                 }
                 else
                 {
@@ -161,5 +163,7 @@ namespace CAConferenceManagement.Controllers
             }
 
         }
+
+
     }
 }

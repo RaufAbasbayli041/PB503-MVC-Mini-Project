@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CAConferenceManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2682b2490f6cf60e28ee487565685f2b8098011")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16e5a2b6f2f595e3c43973f6c4e691cd40ca462e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CAConferenceManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CAConferenceManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

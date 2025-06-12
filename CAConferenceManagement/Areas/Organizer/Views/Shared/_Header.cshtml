@@ -2,7 +2,10 @@
 
 
 <header class="header-area header-sticky">
-    <div class="container">
+
+
+  
+     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
@@ -18,8 +21,10 @@
                             <i class="fa fa-search"></i>
                         </form>
                     </div>
-
-                    <h1>Welcome,Organizer!</h1>
+                    <a href="#" class="logo" style="padding-left:100px">
+                        <h1>Welcome,Organizer!</h1>
+                    </a>
+                    
                     <!-- ***** Serach Start ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
@@ -29,7 +34,7 @@
                       
 
                         <li class="scroll-to-section">
-                            <a asp-controller="Account" asp-action="Logout">Logout</a>
+                            <a asp-area="" asp-controller="Account" asp-action="Login">Logout</a>
                         </li>
 
                     </ul>
@@ -40,5 +45,5 @@
                 </nav>
             </div>
         </div>
-    </div>
+    </div> 
 </header>
