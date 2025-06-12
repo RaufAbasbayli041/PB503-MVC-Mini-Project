@@ -43,6 +43,9 @@ namespace CAConferenceManagement.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("LocationId")
+                        .HasColumnType("int");
+
                     b.Property<int>("OrganizerId")
                         .HasColumnType("int");
 
@@ -68,6 +71,7 @@ namespace CAConferenceManagement.Migrations
                             Description = "A conference about the latest in technology.",
                             EventDate = new DateTime(2023, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
+                            LocationId = 0,
                             OrganizerId = 2,
                             Title = "Tech Conference 2023",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -79,6 +83,7 @@ namespace CAConferenceManagement.Migrations
                             Description = "A workshop on artificial intelligence.",
                             EventDate = new DateTime(2023, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
+                            LocationId = 0,
                             OrganizerId = 1,
                             Title = "AI Workshop",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)

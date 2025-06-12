@@ -13,7 +13,12 @@ namespace CAConferenceManagement.Repository.Implementation
 
         public async Task<IEnumerable<Event>> GetEventsByOrganizerIdAsync()
         {
-            return await _conferenceDB.Events.Include(x => x.Organizer).Where(y => y.OrganizerId != null && y.IsDeleted == false).AsNoTracking().ToListAsync();
+            return await _conferenceDB.Events.Include(x => x.Organizer)
+                .Where(y => y.OrganizerId != null && y.IsDeleted == false)
+                .Include(z=>z.Location)
+                .Where(x => x.LocationId != null && x.IsDeleted == false)
+                .AsNoTracking()
+                .ToListAsync();
         }
 
        

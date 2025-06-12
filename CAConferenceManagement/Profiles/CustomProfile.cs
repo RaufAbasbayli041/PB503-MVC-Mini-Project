@@ -12,14 +12,18 @@ namespace CAConferenceManagement.CustomProfile
     {
         public CustomProfile()
         {
-            CreateMap<Organizer, OrganizerDTO>().ReverseMap();
-            CreateMap<Event, EventDTO>().ReverseMap();
+            CreateMap<OrganizerDTO, Organizer>().ReverseMap();
+            CreateMap<Event, EventDTO>()
+     .ForMember(dest => dest.Organizer, opt => opt.MapFrom(src => src.Organizer))
+     .ForMember(dest => dest.EventTypes, opt => opt.MapFrom(src => src.EventTypes))
+        .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.Location))
+     .ReverseMap();
             CreateMap<Invitation, InvitationDTO>().ReverseMap();
             CreateMap<EventType, EventTypeDTO>().ReverseMap();
             CreateMap<Location, LocationDTO>().ReverseMap();
             CreateMap<Notification, NotificationDTO>().ReverseMap();
             CreateMap<FeedBack, FeedBackDTO>().ReverseMap();
-            CreateMap<EventDTO,Event>().ReverseMap();
+          
         }
     }
 }

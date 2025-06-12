@@ -1,58 +1,51 @@
-﻿@model IEnumerable<CAConferenceManagement.Models.EventDTO>
+﻿@model IEnumerable<CAConferenceManagement.Models.OrganizerDTO>
 
 @{
     Layout = "~/Areas/Organizer/Views/Shared/_OrganizerLayout.cshtml";
 }
+<header class=" header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="#" class="logo">
+                        <h1>PB503</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <div class="search-input">
+                        <form id="search" action="#">
+                            <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                            <i class="fa fa-search"></i>
+                        </form>
+                    </div>
+                    <a href="#" class="logo" style="padding-left:100px">
+                        <h1>Welcome,Organizer!</h1>
+                    </a>
 
-@* 
-<h1>Index</h1>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Surname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table> *@
+                        <li class="scroll-to-section"><a asp-controller="Event" asp-action="Index">Events</a></li>
 
+
+                        <li class="scroll-to-section">
+                            <a asp-area="" asp-controller="Account" asp-action="Login">Logout</a>
+                        </li>
+
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
 <div class="main-banner" id="top">
     <div class="container">
@@ -110,9 +103,7 @@
     </div>
 </div>
 
-
-
-<div class="section events" id="events">
+@* <div class="section events" id="events">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -160,7 +151,7 @@
           
         </div>
     </div>
-</div>
+</div> *@
 
 <div class="contact-us section" id="contact">
     <div class="container">

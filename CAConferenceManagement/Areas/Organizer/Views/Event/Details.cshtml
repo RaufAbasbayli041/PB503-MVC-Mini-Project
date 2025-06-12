@@ -1,0 +1,48 @@
+﻿@model CAConferenceManagement.Models.EventDTO
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="container mt-4">
+    <h4>Detail</h4>
+    <hr />
+    <table class="table table-borderless w-auto mx-auto">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>@Model.Title</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>@Model.Description</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>@Model.EventDate</td>
+            </tr>
+        @*     <tr>
+                <th>Location</th>
+                <td>@Model.Location.Address</td>
+            </tr> *@
+
+            <tr>
+                <th>Event Type</th>
+                <td>@Model.EventTypes.</td>
+            </tr>
+        @*     <tr>
+                <th>Organizer</th>
+                <td>@Model.Organizer.Name</td>
+            </tr> *@
+        </tbody>
+    </table>
+    <div class="text-center mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning me-2">Update</a>
+        <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+    </div>
+</div>

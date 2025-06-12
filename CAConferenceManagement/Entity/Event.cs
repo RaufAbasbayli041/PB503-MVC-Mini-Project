@@ -10,7 +10,9 @@ namespace CAConferenceManagement.Entity
         public string Description { get; set; }
         public DateTime EventDate { get; set; }
         public ICollection<Invitation> Invitations { get; set; } = new List<Invitation>();
+
         public ICollection<EventType> EventTypes { get; set; } = new List<EventType>();
+        public int LocationId { get; set; }
         public Location Location { get; set; }
         public int OrganizerId { get; set; }
 
