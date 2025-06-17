@@ -81,11 +81,17 @@
                                         </li>
                                         <li>
                                             <span>Location:</span>
-                                            <h6>@item.Location.Address</h6>
+                                           
+                                            <h6>@item.LocationId</h6>
+
                                         </li>
                                         <li>
                                             <span>Organizer:</span>
-                                            <h6>@item.Organizer.Name</h6>
+                                            @foreach(var organizer in item.Organizers)
+                                            {
+                                                <span class="badge bg-secondary">@organizer.Name</span>
+                                            }
+                                          
                                         </li>
 
                                         <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-angle-right"></i></a>

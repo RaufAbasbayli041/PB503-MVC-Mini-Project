@@ -17,15 +17,16 @@ namespace CAConferenceManagement.Configurations
                 .OnDelete(DeleteBehavior.Restrict);
 
 
-           builder.HasOne(e=>e.Organizer).WithOne().HasForeignKey<Event>(o => o.OrganizerId)
+           builder.HasMany(e => e.Organizers).WithOne(o => o.Event)
+                .HasForeignKey(o => o.EventId)
                 .OnDelete(DeleteBehavior.Restrict);
 
 
 
 
 
-            builder.HasOne(e => e.Location).WithOne(l => l.Event)
-                .HasForeignKey<Location>(l => l.EventId)
+            builder.HasOne(e => e.Location).WithMany(l => l.Events)
+                .HasForeignKey(l => l.LocationId)
                 .OnDelete(DeleteBehavior.Restrict);
             builder.HasMany(e => e.Notifications).WithOne(n => n.Event)
                 .HasForeignKey(n => n.EventId)

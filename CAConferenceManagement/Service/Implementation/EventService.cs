@@ -17,7 +17,7 @@ namespace CAConferenceManagement.Service.Implementation
         }
         public async Task<IEnumerable<EventDTO>> GetEventsByOrganizerIdAsync()
         {
-            var events = await _eventRepository.GetEventsByOrganizerIdAsync();
+            var events = await _eventRepository.GetEventsByOrganizersIdAsync();
             if (events == null)
             {
                 return null;

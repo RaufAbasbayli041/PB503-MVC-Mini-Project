@@ -6,7 +6,7 @@ using CAConferenceManagement.Service.Interface;
 
 namespace CAConferenceManagement.Service.Implementation
 {
-    public class LocationService : GenericService<LocationDTO, Location>, ILocationService
+    public class LocationService : GenericService<LocationDTO, Location>, ILocationService 
     {
         private readonly ILocationRepository _locationRepository;
 
@@ -17,11 +17,11 @@ namespace CAConferenceManagement.Service.Implementation
             _mapper = mapper;
         }
 
+      
 
-
-        public async Task<IEnumerable<LocationDTO>> GetLocationsByEventIdAsync()
+        public async Task<IEnumerable<LocationDTO>> GetLocationByEventsIdAsync()
         {
-            var locations = await _locationRepository.GetLocationsByEventIdAsync();
+            var locations = await _locationRepository.GetLocationByEventsIdAsync();
             if (locations == null)
             {
                 return null;

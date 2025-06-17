@@ -43,7 +43,7 @@ namespace CAConferenceManagement.Areas.Organizer.Controllers
             
         }
                
-        public async Task<ActionResult> CreateAsync()
+        public async Task<ActionResult> Create()
         {
             ViewBag.Organizer = await _db.Organizers.ToListAsync();
             ViewBag.Location = await _db.Locations.ToListAsync();

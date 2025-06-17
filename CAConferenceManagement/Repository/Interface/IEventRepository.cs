@@ -4,7 +4,7 @@ namespace CAConferenceManagement.Repository.Interface
 {
     public interface IEventRepository : IGenericRepository<Event>
     {
-        Task<IEnumerable<Event>> GetEventsByOrganizerIdAsync();
+        Task<IEnumerable<Event>> GetEventsByOrganizersIdAsync();
        
 
 

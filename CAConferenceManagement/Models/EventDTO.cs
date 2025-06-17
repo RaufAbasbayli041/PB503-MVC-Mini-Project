@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using CAConferenceManagement.Entity;
 
 namespace CAConferenceManagement.Models
 {
@@ -12,12 +13,11 @@ namespace CAConferenceManagement.Models
         [Required]
         [Display(Name = "Location")]
         public int LocationId { get; set; } 
-        public LocationDTO Location { get; set; }
+        public Location Location { get; set; }
 
         [Required]
         [Display(Name ="Organizer")]
-        public int OrganizerId { get; set; }
-        public OrganizerDTO Organizer { get; set; }
+        public ICollection<Organizer> Organizers { get; set; }
         public List<EventTypeDTO> EventTypes { get; set; } = new List<EventTypeDTO>();
 
 

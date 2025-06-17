@@ -46,9 +46,6 @@ namespace CAConferenceManagement.Migrations
                     b.Property<int>("LocationId")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrganizerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -58,8 +55,7 @@ namespace CAConferenceManagement.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrganizerId")
-                        .IsUnique();
+                    b.HasIndex("LocationId");
 
                     b.ToTable("Events");
 
@@ -71,8 +67,7 @@ namespace CAConferenceManagement.Migrations
                             Description = "A conference about the latest in technology.",
                             EventDate = new DateTime(2023, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            LocationId = 0,
-                            OrganizerId = 2,
+                            LocationId = 2,
                             Title = "Tech Conference 2023",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -83,8 +78,7 @@ namespace CAConferenceManagement.Migrations
                             Description = "A workshop on artificial intelligence.",
                             EventDate = new DateTime(2023, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            LocationId = 0,
-                            OrganizerId = 1,
+                            LocationId = 1,
                             Title = "AI Workshop",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -237,9 +231,6 @@ namespace CAConferenceManagement.Migrations
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -252,9 +243,6 @@ namespace CAConferenceManagement.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EventId")
-                        .IsUnique();
-
                     b.ToTable("Locations");
 
                     b.HasData(
@@ -264,7 +252,6 @@ namespace CAConferenceManagement.Migrations
                             Address = "123 Main St, Cityville",
                             Capacity = 200,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EventId = 2,
                             IsDeleted = false,
                             Name = "Convention Center",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -275,7 +262,6 @@ namespace CAConferenceManagement.Migrations
                             Address = "456 Tech Rd, Innovatown",
                             Capacity = 15,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EventId = 1,
                             IsDeleted = false,
                             Name = "Tech Hub",
                             Updated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -331,6 +317,9 @@ namespace CAConferenceManagement.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -347,6 +336,8 @@ namespace CAConferenceManagement.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EventId");
+
                     b.ToTable("Organizers");
 
                     b.HasData(
@@ -355,6 +346,7 @@ namespace CAConferenceManagement.Migrations
                             Id = 1,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "organizer1@gmail.com",
+                            EventId = 2,
                             IsDeleted = false,
                             Name = "organizer1",
                             Surname = "organizer1",
@@ -365,6 +357,7 @@ namespace CAConferenceManagement.Migrations
                             Id = 2,
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "organizer2@gmail.com",
+                            EventId = 1,
                             IsDeleted = false,
                             Name = "organizer2",
                             Surname = "organizer2",
@@ -614,13 +607,13 @@ namespace CAConferenceManagement.Migrations
 
             modelBuilder.Entity("CAConferenceManagement.Entity.Event", b =>
                 {
-                    b.HasOne("CAConferenceManagement.Entity.Organizer", "Organizer")
-                        .WithOne()
-                        .HasForeignKey("CAConferenceManagement.Entity.Event", "OrganizerId")
+                    b.HasOne("CAConferenceManagement.Entity.Location", "Location")
+                        .WithMany("Events")
+                        .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Organizer");
+                    b.Navigation("Location");
                 });
 
             modelBuilder.Entity("CAConferenceManagement.Entity.EventType", b =>
@@ -671,21 +664,21 @@ namespace CAConferenceManagement.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("CAConferenceManagement.Entity.Location", b =>
+            modelBuilder.Entity("CAConferenceManagement.Entity.Notification", b =>
                 {
                     b.HasOne("CAConferenceManagement.Entity.Event", "Event")
-                        .WithOne("Location")
-                        .HasForeignKey("CAConferenceManagement.Entity.Location", "EventId")
+                        .WithMany("Notifications")
+                        .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Event");
                 });
 
-            modelBuilder.Entity("CAConferenceManagement.Entity.Notification", b =>
+            modelBuilder.Entity("CAConferenceManagement.Entity.Organizer", b =>
                 {
                     b.HasOne("CAConferenceManagement.Entity.Event", "Event")
-                        .WithMany("Notifications")
+                        .WithMany("Organizers")
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -763,16 +756,20 @@ namespace CAConferenceManagement.Migrations
 
                     b.Navigation("Invitations");
 
-                    b.Navigation("Location")
-                        .IsRequired();
-
                     b.Navigation("Notifications");
+
+                    b.Navigation("Organizers");
                 });
 
             modelBuilder.Entity("CAConferenceManagement.Entity.Invitation", b =>
                 {
                     b.Navigation("Participation")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("CAConferenceManagement.Entity.Location", b =>
+                {
+                    b.Navigation("Events");
                 });
 
             modelBuilder.Entity("CAConferenceManagement.Entity.User", b =>

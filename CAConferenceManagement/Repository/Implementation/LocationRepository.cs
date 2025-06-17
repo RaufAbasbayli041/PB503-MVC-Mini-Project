@@ -11,11 +11,11 @@ namespace CAConferenceManagement.Repository.Implementation
         {
         }
 
-        public async Task<IEnumerable<Location>> GetLocationsByEventIdAsync()
+        public async Task<IEnumerable<Location>> GetLocationByEventsIdAsync()
         {
             return await _conferenceDB.Locations
-                .Include(location => location.Event)
-                .Where(location => location.EventId != null && !location.IsDeleted)
+                .Include(location => location.Events)
+                .Where(location => location.Events.Any() && !location.IsDeleted)
                 .AsNoTracking()
                 .ToListAsync();
         }

@@ -14,7 +14,7 @@ namespace CAConferenceManagement.CustomProfile
         {
             CreateMap<OrganizerDTO, Organizer>().ReverseMap();
             CreateMap<Event, EventDTO>()
-     .ForMember(dest => dest.Organizer, opt => opt.MapFrom(src => src.Organizer))
+     .ForMember(dest => dest.Organizers, opt => opt.MapFrom(src => src.Organizers))
      .ForMember(dest => dest.EventTypes, opt => opt.MapFrom(src => src.EventTypes))
         .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.Location))
      .ReverseMap();

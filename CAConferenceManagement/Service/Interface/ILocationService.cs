@@ -5,7 +5,7 @@ namespace CAConferenceManagement.Service.Interface
 {
     public interface ILocationService : IGenericService<LocationDTO,Location>
     {
-        Task<IEnumerable<LocationDTO>> GetLocationsByEventIdAsync();
+        Task<IEnumerable<LocationDTO>> GetLocationByEventsIdAsync();
 
     }
 }

@@ -5,7 +5,7 @@ namespace CAConferenceManagement.Repository.Interface
     public interface ILocationRepository : IGenericRepository<Location>
     {
       
-        Task<IEnumerable<Location>> GetLocationsByEventIdAsync();
+        Task<IEnumerable<Location>> GetLocationByEventsIdAsync();
       
     }
 }
