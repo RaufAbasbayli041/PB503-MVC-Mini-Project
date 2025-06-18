@@ -9,7 +9,7 @@ namespace CAConferenceManagement.Configurations
     {
         public void Configure(EntityTypeBuilder<Organizer> builder)
         {
-           builder.HasOne(x=>x.Event).WithMany(p=>p.Organizers).HasForeignKey(x=>x.EventId).OnDelete(DeleteBehavior.Restrict); 
+            builder.HasMany(x => x.Events).WithMany(p => p.Organizers);
         }
     }
 }

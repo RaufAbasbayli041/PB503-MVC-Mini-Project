@@ -17,9 +17,9 @@ namespace CAConferenceManagement.Configurations
                 .OnDelete(DeleteBehavior.Restrict);
 
 
-           builder.HasMany(e => e.Organizers).WithOne(o => o.Event)
-                .HasForeignKey(o => o.EventId)
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.HasMany(e => e.Organizers).WithMany(o => o.Events);
+             
+              
 
 
 

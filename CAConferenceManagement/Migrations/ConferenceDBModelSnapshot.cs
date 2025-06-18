@@ -317,9 +317,6 @@ namespace CAConferenceManagement.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -335,12 +332,9 @@ namespace CAConferenceManagement.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EventId");
 
                     b.HasIndex("UserId");
 
@@ -452,6 +446,21 @@ namespace CAConferenceManagement.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("EventOrganizer", b =>
+                {
+                    b.Property<int>("EventsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrganizersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EventsId", "OrganizersId");
+
+                    b.HasIndex("OrganizersId");
+
+                    b.ToTable("EventOrganizer");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -659,19 +668,10 @@ namespace CAConferenceManagement.Migrations
 
             modelBuilder.Entity("CAConferenceManagement.Entity.Organizer", b =>
                 {
-                    b.HasOne("CAConferenceManagement.Entity.Event", "Event")
-                        .WithMany("Organizers")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("CAConferenceManagement.Entity.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Event");
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("User");
                 });
@@ -685,6 +685,21 @@ namespace CAConferenceManagement.Migrations
                         .IsRequired();
 
                     b.Navigation("Invitation");
+                });
+
+            modelBuilder.Entity("EventOrganizer", b =>
+                {
+                    b.HasOne("CAConferenceManagement.Entity.Event", null)
+                        .WithMany()
+                        .HasForeignKey("EventsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CAConferenceManagement.Entity.Organizer", null)
+                        .WithMany()
+                        .HasForeignKey("OrganizersId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -747,8 +762,6 @@ namespace CAConferenceManagement.Migrations
                     b.Navigation("Invitations");
 
                     b.Navigation("Notifications");
-
-                    b.Navigation("Organizers");
                 });
 
             modelBuilder.Entity("CAConferenceManagement.Entity.Invitation", b =>
