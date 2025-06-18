@@ -36,18 +36,18 @@ namespace CAConferenceManagement.DB
 
             );
 
-            modelBuilder.Entity<Organizer>().HasData(
-                new Organizer { Id = 1, Name = "organizer1", Surname = "organizer1", Email = "organizer1@gmail.com",EventId = 2 },
-                new Organizer
-                {
-                    Id = 2,
-                    Name = "organizer2",
-                    Surname = "organizer2",
-                    Email = "organizer2@gmail.com",
-                    EventId = 1 // Assuming this organizer is associated with the first event
+            //modelBuilder.Entity<Organizer>().HasData(
+            //    new Organizer { Id = 1, Name = "organizer1", Surname = "organizer1", Email = "organizer1@gmail.com", EventId = 2 },
+            //    new Organizer
+            //    {
+            //        Id = 2,
+            //        Name = "organizer2",
+            //        Surname = "organizer2",
+            //        Email = "organizer2@gmail.com",
+            //        EventId = 1 // Assuming this organizer is associated with the first event
 
-                }
-            );
+            //    }
+            //);
 
         }
 
@@ -64,7 +64,7 @@ namespace CAConferenceManagement.DB
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Participation> Participations { get; set; }
         public DbSet<EventType> EventTypes { get; set; }
-        public DbSet<CAConferenceManagement.Models.EventDTO> EventDTO { get; set; } = default!;
+        
     }
 
 

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CAConferenceManagement.Migrations
 {
     /// <inheritdoc />
-    public partial class _23dwr3gf : Migration
+    public partial class dfwr45yutyu : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,15 +34,15 @@ namespace CAConferenceManagement.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedEmail = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PhoneNumberConfirmed = table.Column<bool>(type: "bit", nullable: false),
                     TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
@@ -55,21 +55,21 @@ namespace CAConferenceManagement.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Organizers",
+                name: "Locations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Capacity = table.Column<int>(type: "int", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Organizers", x => x.Id);
+                    table.PrimaryKey("PK_Locations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -187,7 +187,7 @@ namespace CAConferenceManagement.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EventDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    OrganizerId = table.Column<int>(type: "int", nullable: false),
+                    LocationId = table.Column<int>(type: "int", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Updated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false)
@@ -196,9 +196,9 @@ namespace CAConferenceManagement.Migrations
                 {
                     table.PrimaryKey("PK_Events", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Events_Organizers_OrganizerId",
-                        column: x => x.OrganizerId,
-                        principalTable: "Organizers",
+                        name: "FK_Events_Locations_LocationId",
+                        column: x => x.LocationId,
+                        principalTable: "Locations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -289,7 +289,7 @@ namespace CAConferenceManagement.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Locations",
+                name: "LocationDTO",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -297,16 +297,13 @@ namespace CAConferenceManagement.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Capacity = table.Column<int>(type: "int", nullable: false),
-                    EventId = table.Column<int>(type: "int", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Updated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    EventId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Locations", x => x.Id);
+                    table.PrimaryKey("PK_LocationDTO", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Locations_Events_EventId",
+                        name: "FK_LocationDTO_Events_EventId",
                         column: x => x.EventId,
                         principalTable: "Events",
                         principalColumn: "Id",
@@ -338,6 +335,38 @@ namespace CAConferenceManagement.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Organizers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Created = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Updated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Organizers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Organizers_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Organizers_Events_EventId",
+                        column: x => x.EventId,
+                        principalTable: "Events",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Participations",
                 columns: table => new
                 {
@@ -361,18 +390,83 @@ namespace CAConferenceManagement.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "EventDTO",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LocationId = table.Column<int>(type: "int", nullable: false),
+                    OrganizerIds = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EventDTO", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_EventDTO_LocationDTO_LocationId",
+                        column: x => x.LocationId,
+                        principalTable: "LocationDTO",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EventTypeDTO",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EventTypeDTO", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_EventTypeDTO_EventDTO_EventId",
+                        column: x => x.EventId,
+                        principalTable: "EventDTO",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OrganizerDTO",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EventDTOId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrganizerDTO", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrganizerDTO_EventDTO_EventDTOId",
+                        column: x => x.EventDTOId,
+                        principalTable: "EventDTO",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.InsertData(
-                table: "Organizers",
-                columns: new[] { "Id", "Created", "Email", "IsDeleted", "Name", "Surname", "Updated" },
+                table: "Locations",
+                columns: new[] { "Id", "Address", "Capacity", "Created", "IsDeleted", "Name", "Updated" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "organizer1@gmail.com", false, "organizer1", "organizer1", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "organizer2@gmail.com", false, "organizer2", "organizer2", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, "123 Main St, Cityville", 200, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "Convention Center", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, "456 Tech Rd, Innovatown", 15, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "Tech Hub", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
                 table: "Events",
-                columns: new[] { "Id", "Created", "Description", "EventDate", "IsDeleted", "OrganizerId", "Title", "Updated" },
+                columns: new[] { "Id", "Created", "Description", "EventDate", "IsDeleted", "LocationId", "Title", "Updated" },
                 values: new object[,]
                 {
                     { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "A conference about the latest in technology.", new DateTime(2023, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), false, 2, "Tech Conference 2023", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
@@ -386,15 +480,6 @@ namespace CAConferenceManagement.Migrations
                 {
                     { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, false, "Conference", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, false, "Workshop", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Locations",
-                columns: new[] { "Id", "Address", "Capacity", "Created", "EventId", "IsDeleted", "Name", "Updated" },
-                values: new object[,]
-                {
-                    { 1, "123 Main St, Cityville", 200, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, false, "Convention Center", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, "456 Tech Rd, Innovatown", 15, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, false, "Tech Hub", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.CreateIndex(
@@ -437,10 +522,19 @@ namespace CAConferenceManagement.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Events_OrganizerId",
+                name: "IX_EventDTO_LocationId",
+                table: "EventDTO",
+                column: "LocationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Events_LocationId",
                 table: "Events",
-                column: "OrganizerId",
-                unique: true);
+                column: "LocationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EventTypeDTO_EventId",
+                table: "EventTypeDTO",
+                column: "EventId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EventTypes_EventId",
@@ -468,15 +562,29 @@ namespace CAConferenceManagement.Migrations
                 column: "UserId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Locations_EventId",
-                table: "Locations",
-                column: "EventId",
-                unique: true);
+                name: "IX_LocationDTO_EventId",
+                table: "LocationDTO",
+                column: "EventId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Notifications_EventId",
                 table: "Notifications",
                 column: "EventId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrganizerDTO_EventDTOId",
+                table: "OrganizerDTO",
+                column: "EventDTOId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Organizers_EventId",
+                table: "Organizers",
+                column: "EventId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Organizers_UserId",
+                table: "Organizers",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Participations_InvitationId",
@@ -504,16 +612,22 @@ namespace CAConferenceManagement.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "EventTypeDTO");
+
+            migrationBuilder.DropTable(
                 name: "EventTypes");
 
             migrationBuilder.DropTable(
                 name: "FeedBacks");
 
             migrationBuilder.DropTable(
-                name: "Locations");
+                name: "Notifications");
 
             migrationBuilder.DropTable(
-                name: "Notifications");
+                name: "OrganizerDTO");
+
+            migrationBuilder.DropTable(
+                name: "Organizers");
 
             migrationBuilder.DropTable(
                 name: "Participations");
@@ -522,7 +636,13 @@ namespace CAConferenceManagement.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
+                name: "EventDTO");
+
+            migrationBuilder.DropTable(
                 name: "Invitations");
+
+            migrationBuilder.DropTable(
+                name: "LocationDTO");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
@@ -531,7 +651,7 @@ namespace CAConferenceManagement.Migrations
                 name: "Events");
 
             migrationBuilder.DropTable(
-                name: "Organizers");
+                name: "Locations");
         }
     }
 }

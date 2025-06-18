@@ -26,16 +26,36 @@
                 <input asp-for="EventDate" class="form-control" />
                 <span asp-validation-for="EventDate" class="text-danger"></span>
             </div>
-          @*   <div class="form-group">
+            <div class="form-group">
                 <label asp-for="LocationId" class="control-label"></label>
-                <select asp-for="lo" class="form-control">
-                    <option value="" hidden>Select Merchant</option>
-                    @foreach (var item in ViewBag.Merchants)
+                <select asp-for="LocationId" class="form-control">
+                    <option value="" hidden>Select Location</option>
+                    @foreach (var item in ViewBag.Location)
                     {
                         <option value="@item.Id">@item.Name</option>
                     }
                 </select>
-            </div> *@
+            </div>
+            <div class="form-group">
+                <label asp-for="EventTypes" class="control-label"></label>
+                <select asp-for="EventTypes" class="form-control" multiple>
+                    <option value="" hidden>Select Type</option>
+                    @foreach (var item in ViewBag.EventTypes)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrganizerIds" class="control-label"></label>
+                <select asp-for="OrganizerIds" class="form-control" multiple>
+                    <option value="" hidden>Select Organizers</option>
+                    @foreach (var item in ViewBag.Organizer )
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

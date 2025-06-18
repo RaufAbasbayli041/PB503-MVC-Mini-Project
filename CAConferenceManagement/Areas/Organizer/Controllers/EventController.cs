@@ -24,6 +24,7 @@ namespace CAConferenceManagement.Areas.Organizer.Controllers
 
         public async Task<ActionResult> Index()
         {
+
            var events = await _eventService.GetEventsByOrganizerIdAsync();
             return View(events);
         }
@@ -31,7 +32,6 @@ namespace CAConferenceManagement.Areas.Organizer.Controllers
 
         public async Task<ActionResult> Details(int id)
         {
-            ViewBag.Organizer = await _db.Organizers.ToListAsync();
             ViewBag.Location = await _db.Locations.ToListAsync();
             ViewBag.EventTypes = await _db.EventTypes.ToListAsync();
             var data = await _eventService.GetByIdAsync(id);
@@ -45,7 +45,7 @@ namespace CAConferenceManagement.Areas.Organizer.Controllers
                
         public async Task<ActionResult> Create()
         {
-            ViewBag.Organizer = await _db.Organizers.ToListAsync();
+         ViewBag.Organizer = await _db.Organizers.ToListAsync();
             ViewBag.Location = await _db.Locations.ToListAsync();
             ViewBag.EventTypes = await _db.EventTypes.ToListAsync();
 

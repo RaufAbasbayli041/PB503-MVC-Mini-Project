@@ -8,6 +8,8 @@ namespace CAConferenceManagement.Models
         public string Name { get; set; }
 
         public int EventId { get; set; }
-       
+        public EventDTO Event { get; set; }
+
+
     }
 }

@@ -8,6 +8,7 @@ namespace CAConferenceManagement.Entity
         public string Name { get; set; }
         public string Surname { get; set; }
         
+
        
        // public RoleStatus Role { get; set; }
         public List<Invitation> Invitation { get; set; } = new List<Invitation>();

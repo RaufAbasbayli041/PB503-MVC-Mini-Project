@@ -24,21 +24,32 @@
             </tr>
             <tr>
                 <th>Date</th>
-                <td>@Model.EventDate</td>
+                <td>@Model.EventDate.ToString("dd.MM.yyyy")</td>
             </tr>
-        @*     <tr>
+            <tr>
                 <th>Location</th>
-                <td>@Model.Location.Address</td>
-            </tr> *@
+                <td>@Model.Location?.Address</td>
+            </tr>
 
             <tr>
                 <th>Event Type</th>
-                <td>@Model.EventTypes.</td>
+                <td>
+                    @foreach (var type in Model.EventTypes)
+                    {
+                        <span class="badge bg-secondary">@type.Name</span>
+                    }
+                </td>
+
             </tr>
-        @*     <tr>
+                <tr>
                 <th>Organizer</th>
-                <td>@Model.Organizer.Name</td>
-            </tr> *@
+                <td>
+                    @foreach (var organizer in Model.Organizers)
+                    {
+                        <span class="badge bg-primary">@organizer?.Name</span>
+                    }
+                </td>
+            </tr>
         </tbody>
     </table>
     <div class="text-center mt-3">

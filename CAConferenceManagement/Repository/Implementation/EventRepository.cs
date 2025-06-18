@@ -13,9 +13,17 @@ namespace CAConferenceManagement.Repository.Implementation
 
         public async Task<IEnumerable<Event>> GetEventsByOrganizersIdAsync()
         {
-            return await _conferenceDB.Events.Include(e => e.Organizers)
-                 .Where(e => e.Organizers.Any()).AsNoTracking()
-                 .ToListAsync();
+            var a = await _conferenceDB.Events
+                .Include(e => e.Organizers)
+                .Include(e => e.EventTypes)
+                .Include(e => e.Location)
+                .AsNoTracking()
+                .ToListAsync();
+            return a;
+
+            //return await _conferenceDB.Events.Include(e => e.Organizers)
+            //     .Where(e => e.Organizers.Any()).AsNoTracking()
+            //     .ToListAsync();
 
         }
 

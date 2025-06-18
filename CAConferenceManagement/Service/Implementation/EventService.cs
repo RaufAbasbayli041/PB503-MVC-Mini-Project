@@ -16,7 +16,8 @@ namespace CAConferenceManagement.Service.Implementation
             _mapper = mapper;
         }
         public async Task<IEnumerable<EventDTO>> GetEventsByOrganizerIdAsync()
-        {
+       {
+                
             var events = await _eventRepository.GetEventsByOrganizersIdAsync();
             if (events == null)
             {

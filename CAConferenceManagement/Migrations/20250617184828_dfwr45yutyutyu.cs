@@ -5,7 +5,7 @@
 namespace CAConferenceManagement.Migrations
 {
     /// <inheritdoc />
-    public partial class werf235gh : Migration
+    public partial class dfwr45yutyutyu : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

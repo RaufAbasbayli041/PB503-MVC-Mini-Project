@@ -1,4 +1,5 @@
-﻿using CAConferenceManagement.EmailOperations.Interface;
+﻿using CAConferenceManagement.DB;
+using CAConferenceManagement.EmailOperations.Interface;
 using CAConferenceManagement.Entity;
 using CAConferenceManagement.Helpers.Enum.Role;
 using CAConferenceManagement.Models;
@@ -15,12 +16,14 @@ namespace CAConferenceManagement.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IEmailSenderOpt _emailSender;
+        private readonly ConferenceDB _conferenceDB;
 
-        public AccountController(SignInManager<User> signInManager, UserManager<User> userManager, IEmailSenderOpt emailSender)
+        public AccountController(SignInManager<User> signInManager, UserManager<User> userManager, IEmailSenderOpt emailSender, ConferenceDB conferenceDB)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _emailSender = emailSender;
+            _conferenceDB = conferenceDB;
         }
         [HttpGet]
         public IActionResult Register()
@@ -40,17 +43,38 @@ namespace CAConferenceManagement.Controllers
                 UserName = registerDTO.UserName,
                 Email = registerDTO.Email,
                 Name = registerDTO.Name,
-                Surname = registerDTO.Surname
+                Surname = registerDTO.Surname,
+
             };
+
+
             var result = await _userManager.CreateAsync(user1, registerDTO.Password);
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user1, isPersistent: false);
+
+              
+                if (registerDTO.Role == RoleStatus.Organizer)
+                {
+                    var organizer = new Organizer()
+                    {
+                        UserId = user1.Id,
+                        Name = registerDTO.Name,
+                        Surname = registerDTO.Surname,
+                        Email = registerDTO.Email,
+
+                    };
+                    // eventid null ola bilmwz bunma baxxx
+                    _conferenceDB.Organizers.Add(organizer);
+                    await _conferenceDB.SaveChangesAsync();
+                }
                 await _userManager.AddToRoleAsync(user1, registerDTO.Role.ToString());
+
                 var token = await _userManager.GenerateEmailConfirmationTokenAsync(user1);
 
                 var confirmationLink = Url.Action("ConfirmEmail", "Account", new { userId = user1.Id, token = token }, protocol: HttpContext.Request.Scheme);
 
+              
                 await _emailSender.SendEmailAsync(user1.Email, "Confirm your email", $"Please confirm your account by clicking this link: <a href='{confirmationLink}'>link</a>");
                 TempData["SuccessMessage"] = "Registration successful. Please check your email to confirm your account.";
 
@@ -63,6 +87,8 @@ namespace CAConferenceManagement.Controllers
                     ModelState.AddModelError("", "Registration failed. Please try again.");
                 }
             }
+
+
 
             return View(registerDTO);
         }

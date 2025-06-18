@@ -14,9 +14,8 @@ namespace CAConferenceManagement.Entity
         public ICollection<EventType> EventTypes { get; set; } = new List<EventType>();
         public int LocationId { get; set; }
         public Location Location { get; set; }
-      
 
-        public ICollection  <Organizer> Organizers { get; set; }
+        public ICollection<Organizer> Organizers { get; set; }
         public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
         public ICollection<FeedBack> FeedBacks { get; set; } = new List<FeedBack>();
     }
