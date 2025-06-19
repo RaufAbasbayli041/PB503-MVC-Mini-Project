@@ -1719,3 +1719,4 @@ C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\PB503-MVC-Mini-Project\CAC
 C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\PB503-MVC-Mini-Project\CAConferenceManagement\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\PB503-MVC-Mini-Project\CAConferenceManagement\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\ASUS\Desktop\Code Academy\C#\MVC\MiniProject\PB503-MVC-Mini-Project\CAConferenceManagement\obj\Debug\net8.0\scopedcss\Areas\Organizer\Views\Shared\_OrganizerLayout.cshtml.rz.scp.css
+C:\Users\elnur.a\Desktop\Rauf\Visual Studio\ASP.NET MVC\PB503-MVC-Mini-Project\CAConferenceManagement\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_AdminLayout.cshtml.rz.scp.css
