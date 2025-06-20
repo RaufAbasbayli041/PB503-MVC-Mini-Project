@@ -10,5 +10,6 @@ namespace CAConferenceManagement.Repository.Interface
         Task<bool> DeleteAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsyn(int id);
+
     }
 }

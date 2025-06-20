@@ -8,11 +8,28 @@ using CAConferenceManagement.Service.Interface;
 namespace CAConferenceManagement.Service.Implementation
 {
     public class OrganizerService : GenericService<OrganizerDTO, Organizer>, IOrganizerService
-    {
-        public OrganizerService(IMapper mapper, IGenericRepository<Organizer> repository) : base(mapper, repository)
-        {
+	{
+		private readonly IOrganizerRepository _organizerRepository;
+		private readonly IMapper _mapper;
 
-        }
-    }
+		public OrganizerService(IOrganizerRepository organizerRepository, IMapper mapper) : base(mapper, organizerRepository)
+		{
+			_organizerRepository = organizerRepository;
+			_mapper = mapper;
+		}
+			
+		
+
+		public async Task<IEnumerable<OrganizerDTO>> GetAllWithUserAsync()
+		{
+			var datas = await _organizerRepository.GetAllWithUserAsync();
+			if (datas == null)
+			{
+				return null;
+			}
+			var organizerDtos = _mapper.Map<IEnumerable<OrganizerDTO>>(datas);
+			return organizerDtos;
+		}
+	}
 
 }

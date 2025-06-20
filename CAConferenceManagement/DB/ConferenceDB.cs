@@ -64,6 +64,7 @@ namespace CAConferenceManagement.DB
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Participation> Participations { get; set; }
         public DbSet<EventType> EventTypes { get; set; }
+        public DbSet<CAConferenceManagement.Models.OrganizerDTO> OrganizerDTO { get; set; } = default!;
         
     }
 
