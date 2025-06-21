@@ -1,0 +1,36 @@
+﻿@model CAConferenceManagement.Models.OrganizerDTO
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h4 class="text-center">Organizer Details</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4 text-right " style="max-width:50%;flex:50%">Name</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.Name</dd>
+
+                <dt class="col-sm-4 text-right" style="max-width:50%;flex:50%">Surname</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.Surname</dd>
+
+                <dt class="col-sm-4 text-right" style="max-width:50%;flex:50%">Email</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.Email</dd>
+
+                @if (Model.User != null)
+                {
+                    <dt class="col-sm-4 text-right"style="max-width:50%;flex:50%">Username</dt>
+                    <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.User.Name</dd>
+                }
+            </dl>
+
+            <div class="mt-5" style="display:flex;justify-content:center">
+                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+                <a asp-action="Index" class="btn btn-secondary ml-2">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+

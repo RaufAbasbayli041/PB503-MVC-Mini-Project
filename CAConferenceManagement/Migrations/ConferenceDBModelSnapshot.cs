@@ -448,6 +448,36 @@ namespace CAConferenceManagement.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("CAConferenceManagement.Models.OrganizerDTO", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("OrganizerDTO");
+                });
+
             modelBuilder.Entity("EventOrganizer", b =>
                 {
                     b.Property<int>("EventsId")
@@ -685,6 +715,16 @@ namespace CAConferenceManagement.Migrations
                         .IsRequired();
 
                     b.Navigation("Invitation");
+                });
+
+            modelBuilder.Entity("CAConferenceManagement.Models.OrganizerDTO", b =>
+                {
+                    b.HasOne("CAConferenceManagement.Entity.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("EventOrganizer", b =>
