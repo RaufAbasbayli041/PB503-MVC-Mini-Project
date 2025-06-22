@@ -28,7 +28,16 @@
             </tr>
             <tr>
                 <th>Location</th>
-                <td>@Model.Location?.Address</td>
+                <td>
+                    @if (Model.Location != null)
+                    {
+                        <span class="">@Model.Location.Name</span>
+                    }
+                    else
+                    {
+                        <span class="">No Location</span>
+                    }
+                </td>
             </tr>
 
             <tr>
@@ -36,7 +45,7 @@
                 <td>
                     @foreach (var type in Model.EventTypes)
                     {
-                        <span class="badge bg-secondary">@type.Name</span>
+                        <span class="">@type.Name</span>
                     }
                 </td>
 
@@ -46,7 +55,7 @@
                 <td>
                     @foreach (var organizer in Model.Organizers)
                     {
-                        <span class="badge bg-primary">@organizer?.Name</span>
+                        <span class="">@organizer?.Name</span>
                     }
                 </td>
             </tr>

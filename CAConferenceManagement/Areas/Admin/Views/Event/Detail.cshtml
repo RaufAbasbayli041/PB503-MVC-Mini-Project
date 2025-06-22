@@ -1,0 +1,42 @@
+﻿@model CAConferenceManagement.Models.EventDTO
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h4 class="text-center">Organizer Details</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4 text-right " style="max-width:50%;flex:50%">Id</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.Id</dd>
+
+                <dt class="col-sm-4 text-right" style="max-width:50%;flex:50%">Title</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.Title</dd>
+
+                <dt class="col-sm-4 text-right" style="max-width:50%;flex:50%">Description</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.Description</dd>
+
+
+                <dt class="col-sm-4 text-right" style="max-width:50%;flex:50%">EventDate</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">@Model.EventDate.ToString("dd.MM.yyyy")</dd>
+                <dt class="col-sm-4 text-right" style="max-width:50%;flex:50%">EventTypes</dt>
+                <dd class="col-sm-8" style="max-width:50% ;flex:50%">
+                    @foreach (var eventType in Model.EventTypes)
+                    {
+                        <span class="">@eventType.Name</span>
+                    }
+                </dd>
+
+            </dl>
+
+            <div class="mt-5" style="display:flex;justify-content:center">
+                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+                <a asp-action="Index" class="btn btn-secondary ml-2">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+

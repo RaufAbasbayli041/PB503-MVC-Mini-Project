@@ -34,6 +34,7 @@ namespace CAConferenceManagement.Areas.Organizer.Controllers
         {
             ViewBag.Location = await _db.Locations.ToListAsync();
             ViewBag.EventTypes = await _db.EventTypes.ToListAsync();
+            ViewBag.Organizer = await _db.Organizers.ToListAsync();
             var data = await _eventService.GetByIdAsync(id);
             if (data == null)
             {

@@ -4,11 +4,10 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
 
-<h4>EventDTO</h4>
+<h4 style="display:flex; justify-content:center">Edit</h4>
 <hr />
-<div class="row">
+<div class="row" style="display:flex; justify-content:center">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -30,24 +29,43 @@
             </div>
             <div class="form-group">
                 <label asp-for="LocationId" class="control-label"></label>
-                <select asp-for="LocationId" class="form-control" asp-items="ViewBag.LocationId"></select>
-                <span asp-validation-for="LocationId" class="text-danger"></span>
+                <select asp-for="LocationId" class="form-control">
+                    <option value="" hidden>Select Location</option>
+                    @foreach (var item in ViewBag.Location)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EventTypes" class="control-label"></label>
+                <select asp-for="EventTypes" class="form-control" multiple>
+                    <option value="" hidden>Select Type</option>
+                    @foreach (var item in ViewBag.EventTypes)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="OrganizerIds" class="control-label"></label>
-                <input asp-for="OrganizerIds" class="form-control" />
-                <span asp-validation-for="OrganizerIds" class="text-danger"></span>
+                <select asp-for="OrganizerIds" class="form-control" multiple>
+                    <option value="" hidden>Select Organizers</option>
+                    @foreach (var item in ViewBag.Organizer)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary ml-2">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -16,7 +16,8 @@ namespace CAConferenceManagement.Repository.Implementation
             var a = await _conferenceDB.Events
                 .Include(e => e.Organizers)
                 .Include(e => e.EventTypes)
-                .Include(e => e.Location)
+                .Include(e => e.Location)              
+                .Where(e => e.IsDeleted == false)
                 .AsNoTracking()
                 .ToListAsync();
             return a;

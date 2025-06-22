@@ -1,7 +1,9 @@
-﻿using CAConferenceManagement.Models;
+﻿using CAConferenceManagement.DB;
+using CAConferenceManagement.Models;
 using CAConferenceManagement.Service.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CAConferenceManagement.Areas.Admin.Controllers
 {
@@ -12,12 +14,14 @@ namespace CAConferenceManagement.Areas.Admin.Controllers
 
 		private readonly IWebHostEnvironment _webHostEnvironment;
 		private readonly IEventService _eventService;
-		public EventController(IWebHostEnvironment webHostEnvironment, IEventService eventService)
-		{
-			_webHostEnvironment = webHostEnvironment;
-			_eventService = eventService;
-		}
-		public async Task<ActionResult> Index()
+        private readonly ConferenceDB _db;
+        public EventController(IWebHostEnvironment webHostEnvironment, IEventService eventService, ConferenceDB db)
+        {
+            _webHostEnvironment = webHostEnvironment;
+            _eventService = eventService;
+            _db = db;
+        }
+        public async Task<ActionResult> Index()
 		{
 			var events = await _eventService.GetEventsByOrganizerIdAsync();
 			return View(events);
@@ -38,7 +42,11 @@ namespace CAConferenceManagement.Areas.Admin.Controllers
 
 		public async Task<ActionResult> Edit(int id)
 		{
-			var data = await _eventService.GetByIdAsync(id);
+
+            ViewBag.Location = await _db.Locations.ToListAsync();
+            ViewBag.EventTypes = await _db.EventTypes.ToListAsync();
+            ViewBag.Organizer = await _db.Organizers.ToListAsync();
+            var data = await _eventService.GetByIdAsync(id);
 			if (data == null)
 			{
 				return NotFound();
@@ -51,7 +59,10 @@ namespace CAConferenceManagement.Areas.Admin.Controllers
 		public async Task<ActionResult> Edit(EventDTO eventDTO )
 		{
 
-			var result = await _eventService.Update(eventDTO);
+            ViewBag.Location = await _db.Locations.ToListAsync();
+            ViewBag.EventTypes = await _db.EventTypes.ToListAsync();
+            ViewBag.Organizer = await _db.Organizers.ToListAsync();
+            var result = await _eventService.Update(eventDTO);
 			//ViewBag.Merchants = await _db.Merchants.ToListAsync();
 			return RedirectToAction("Index");
 
@@ -61,7 +72,11 @@ namespace CAConferenceManagement.Areas.Admin.Controllers
 		[HttpGet]
 		public async Task<IActionResult> Detail(int id)
 		{
-			var data = await _eventService.GetByIdAsync(id);
+
+            ViewBag.Location = await _db.Locations.ToListAsync();
+            ViewBag.EventTypes = await _db.EventTypes.ToListAsync();
+            ViewBag.Organizer = await _db.Organizers.ToListAsync();
+            var data = await _eventService.GetByIdAsync(id);
 			if (data == null)
 			{
 				return NotFound();
